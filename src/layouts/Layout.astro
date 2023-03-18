@@ -1,35 +1,49 @@
 ---
 export interface Props {
-	title: string;
+   title: string;
 }
 
 const { title } = Astro.props;
+
+import "@fontsource/koho";
+import "@fontsource/koho/500.css";
+import "@fontsource/koho/700.css";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/png" href="/detalle-proyecto/ayllu-kaypi.png" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+   </head>
+   <body class="bg-[#010B15] bg-homepage-hero-after">
+      <slot />
+   </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+<style>
+   body {
+      --sb-track-color: #232e33;
+      --sb-thumb-color: #2ee5d8;
+      --sb-size: 10px;
+
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+   }
+
+   body::-webkit-scrollbar {
+      width: var(--sb-size);
+   }
+
+   body::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+      border-radius: 10px;
+   }
+
+   body::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 10px;
+   }
 </style>

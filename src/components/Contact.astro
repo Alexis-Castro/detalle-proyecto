@@ -1,0 +1,117 @@
+---
+import contactImg from "@images/villa-ramsa-card.webp";
+---
+
+<!-- <section class="py-12 px-6 lg:py-24 lg:px-14">
+   <div class="lg:max-w-5xl xl:max-w-7xl relative mx-auto">
+      <div class="lg:flex items-center justify-center">
+         <div class="block basis-0 flex-shrink flex-grow p-2 text-center">
+            <h2
+               class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+            >
+               Déjanos tus datos, <span class="text-cyan-ak"
+                  >te contactaremos</span
+               >
+            </h2>
+         </div>
+      </div>
+
+      <div
+         class="md:flex items-center flex-wrap justify-between gap-x-6 space-y-6"
+      >
+         <div
+            class="block basis-0 flex-shrink flex-grow p-2 md:flex-none space-y-6"
+         >
+         </div>
+         <div class="block basis-0 flex-shrink flex-grow p-2 md:flex-none">
+         </div>
+      </div>
+   </div>
+</section> --><!-- HTML -->
+<section class="xl:min-h-screen grid grid-cols-1 lg:grid-cols-2 py-12 lg:py-24 ">
+   <div
+      class="text-white flex flex-col items-center justify-center gap-8 p-8 max-w-lg mx-auto"
+   >
+     
+      <!-- Form -->
+      <form class="px-4 py-8 ">
+         <div class=" text-center leading-5">
+            <h2 class="px-2 text-cyan-ak text-2xl lg:text-3xl font-bold mb-5">
+               ¡Quiero agendar una visita!
+            </h2>
+            <p>Ingresa tus datos e indica hora para que un asesor te contacte.</p>
+         </div>
+         <div class="mt-6">
+            <div class="w-full space-y-8">
+               <div class="md:flex items-center justify-between gap-x-3 space-y-8 md:space-y-0">
+                  <div class="w-full  group">
+                     <input type="text" name="nombres" placeholder="Nombres" class="rounded-lg flex-1 appearance-none border-2 w-full py-2.5 px-3 bg-[#010b15] border-cyan-900 transition text-gray-200 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-700 focus:border-transparent" required="">
+                  </div>
+                  
+                  <div class="w-full  group">
+                     <input type="text" name="apellidos" placeholder="Apellidos" class="rounded-lg flex-1 appearance-none border-2 w-full py-2.5 px-3 bg-[#010b15] border-cyan-900 transition text-gray-200 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-700 focus:border-transparent" required="">
+                  </div>
+               </div>
+
+               <div class="md:flex items-center justify-between gap-x-3 space-y-8 md:space-y-0">
+                  <div class="w-full group">
+                     <label for="email" class="sr-only">Correo electrónico</label>
+
+                     <input type="email" class="rounded-lg flex-1 appearance-none border-2 w-full py-2.5 px-3 bg-[#010b15] border-cyan-900 transition text-gray-200 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-700 focus:border-transparent" name="email" placeholder="Correo" required="">
+                  </div>
+                  
+               </div>
+               <div class="w-full group">
+                  <label for="telefono" class="sr-only">Nro de celular</label>
+
+                  <input type="tel" class="rounded-lg flex-1 appearance-none border-2 w-full py-2.5 px-3 bg-[#010b15] border-cyan-900 transition text-gray-200 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-700 focus:border-transparent" name="telefono" placeholder="Celular" required="">
+               </div>
+
+               <div class="w-full ">
+                  <label for="horario" class="sr-only">Elige un horario</label>
+                  <select name="horario" id="horario" class="rounded-lg flex-1 appearance-none border-2 w-full py-2.5 px-3 bg-[#010b15] border-cyan-900 transition text-gray-200 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-700 focus:border-transparent cursor-pointer" required="">
+                     <option value="" selected="">Elige un horario para llamarlo</option>
+                     <option>8:00 am - 9:00 am</option>
+                     <option>9:00 am - 10:00 am</option>
+                     <option>10:00 am - 11:00 am</option>
+                     <option>11:00 am - 12:00 pm</option>
+                     <option>12:00 pm - 01:00 pm</option>
+                     <option>01:00 pm - 02:00 pm</option>
+                     <option>02:00 pm - 03:00 pm</option>
+                     <option>03:00 pm - 04:00 pm</option>
+                     <option>04:00 pm - 05:00 pm</option>
+                     <option>05:00 pm - 06:00 pm</option>
+                     <option value="En cualquier horario">En cualquier horario</option>
+                  </select>
+               </div>
+
+               <div class="lg:text-sm">
+                  <input id="terminos" type="checkbox" class="w-4 h-4 transition accent-cyan-ak text-cyan-ak rounded ring-offset-gray-800-0 border-b-2 bg-white focus:ring-cyan-ak focus:ring-2" required="">
+                  <label for="terminos" class="ml-2 font-medium mr-1 text-sm text-gray-200">
+                     He leído y acepto los
+                     <a href="https://ayllukaypi.pe/politicas_privacidad" target="_blank" rel="noopener noreferrer" class="hover:underline cursor-pointer text-cyan-ak font-bold js-modal-trigger">
+                        Términos y Condiciones
+                     </a>
+                     y las
+                     <a href="https://ayllukaypi.pe/terminos_condiciones" target="_blank" rel="noopener noreferrer" class="hover:underline cursor-pointer text-cyan-ak font-bold js-modal-trigger">
+                        Políticas de Privacidad
+                     </a>
+                  </label>
+               </div>
+               
+               <div>
+                  <span class="block w-full rounded-md shadow-sm">
+                     <button type="submit" class="btn btn-cyan bg-cyan-ak font-bold text-azul items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg w-full">
+                        Solicito información
+                     </button>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+   <!-- Imagen de fondo -->
+   <div class="hidden lg:block bg-[url('/src/images/villa-ramsa-card.webp')] bg-center bg-cover bg-no-repeat h-full rounded-md ring-8 ring-cyan-ak ring-opacity-90 lg:shadow-[rgba(97,_112,_216,_0.34)_0px_0px_190px]"></div>
+</section>
+
+
