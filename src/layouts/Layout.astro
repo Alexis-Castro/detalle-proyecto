@@ -15,11 +15,27 @@ import "@fontsource/koho/700.css";
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width" />
-      <link rel="icon" type="image/png" href="/detalle-proyecto/ayllu-kaypi.png" />
+      <link
+         rel="icon"
+         type="image/png"
+         href="/detalle-proyecto/ayllu-kaypi.png"
+      />
       <meta name="generator" content={Astro.generator} />
       <title>{title}</title>
+      <!-- <link
+         rel="stylesheet"
+         href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""
+      />
+      <script
+         src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""
+      ></script> -->
+      <!-- <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script> -->
    </head>
-   <body class="bg-[#010B15] bg-homepage-hero-after">
+   <body class="bg-[#010B15] bg-homepage-hero-after overflow-x-hidden">
       <slot />
    </body>
 </html>
