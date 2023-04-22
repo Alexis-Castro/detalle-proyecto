@@ -33,7 +33,10 @@ import "@fontsource/koho/700.css";
          integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
          crossorigin=""
       ></script> -->
-      <!-- <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script> -->
+      <!-- <script
+         src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"
+         defer
+      ></script> -->
    </head>
    <body class="bg-[#010B15] bg-homepage-hero-after overflow-x-hidden">
       <slot />
@@ -63,3 +66,20 @@ import "@fontsource/koho/700.css";
       border-radius: 10px;
    }
 </style>
+
+<script >
+   const conoce = document.querySelector("#conoce");
+   const financia = document.querySelector("#financia");
+
+   conoce.addEventListener("click", clickHandler);
+   financia.addEventListener("click", clickHandler);
+
+   function clickHandler(e) {
+      e.preventDefault();
+
+      const href = this.getAttribute("href");
+      document.querySelector(href).scrollIntoView({
+         behavior: "smooth",
+      });
+   }
+</script>
