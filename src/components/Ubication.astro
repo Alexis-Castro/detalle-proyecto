@@ -1,10 +1,13 @@
 ---
-import mapaRamsa from "@images/mapa-villa-ramsa.jpg";
-import mapaRamsaWebp from "@images/mapa-villa-ramsa.webp";
-import Plano from "./Plano.astro";
+// import mapaRamsa from "@images/mapa-villa-ramsa.jpg";
+// import mapaRamsaWebp from "@images/mapa-villa-ramsa.webp";
+// import Plano from "./Plano.astro";
+
+import ramsaDesktop from "@videos/ramsa2-desktop.mp4";
+import ramsaMobile from "@videos/ramsa2-mobile.mp4";
 ---
 
-<section class="py-10 px-6 lg:py-24 lg:px-14 overflow-x-hidden">
+<section class="py-8 px-6 lg:py-24 lg:px-14 overflow-x-hidden">
    <div class="lg:max-w-5xl xl:max-w-7xl relative mx-auto">
       <div class="lg:flex items-center justify-center">
          <div class="block basis-0 flex-shrink flex-grow p-2 text-center">
@@ -22,7 +25,9 @@ import Plano from "./Plano.astro";
          <div
             class="block basis-0 flex-shrink flex-grow p-2 md:flex-none space-y-6"
          >
+            <!-- <h4 class="text-xl text-white">Este proyecto se ubica:</h4> -->
             <ul class="text-gray-50 text-lg list-inside space-y-5">
+               
                <li class="flex items-center">
                   <svg
                      class="w-6 h-6 mr-1.5 text-cyan-ak flex-shrink-0"
@@ -34,7 +39,7 @@ import Plano from "./Plano.astro";
                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                         clip-rule="evenodd"></path></svg
                   >
-                  <p>A 5 min al norte de la ciudad de lambayeque</p>
+                  <p>A 5 min al norte de la ciudad de Lambayeque</p>
                </li>
                <li class="flex items-center">
                   <svg
@@ -124,17 +129,28 @@ import Plano from "./Plano.astro";
                <Plano />
 
             </div> -->
+<!-- 
+            <ul class="flex border-b">
+               <li class="-mb-px mr-1">
+                 <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold tab" href="#tab1">Tab 1</a>
+               </li>
+               <li class="mr-1">
+                 <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold tab" href="#tab2">Tab 2</a>
+               </li>
+               <li class="mr-1">
+                 <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold tab" href="#tab3">Tab 3</a>
+               </li>
+             </ul> -->
 
             <figure class="relative">
-               <picture>
-                  <source srcset={mapaRamsaWebp} type="image/webp" />
-                  <img
-                     loading="lazy"
-                     src={mapaRamsa}
-                     alt="Mapa de ubicación de Villa los Parques"
-                     class="w-full rounded-md shadow-xl ring-8 ring-cyan-ak ring-opacity-90 mx-auto"
-                  />
-               </picture>
+               <video autoplay muted loop playsinline class="rounded-md ring-8 ring-cyan-ak ring-opacity-90 lg:shadow-[rgba(97,_112,_216,_0.34)_0px_0px_190px] hidden md:block">
+                  <source src={ramsaDesktop} type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <video autoplay muted loop playsinline class="rounded-md ring-8 ring-cyan-ak ring-opacity-90 lg:shadow-[rgba(97,_112,_216,_0.34)_0px_0px_190px] md:hidden">
+                  <source src={ramsaMobile} type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
             </figure>
             <div class="grid md:grid-cols-2 relative md:gap-x-8 gap-y-4 xl:hidden">
                <a href="#" class="btn btn-cyan bg-cyan-ak font-bold text-azul items-center gap-x-2 w-full justify-center md:w-auto">
@@ -157,6 +173,7 @@ import Plano from "./Plano.astro";
 </section>
 
 <style is:global>
+
    .btn {
       perspective: 1000px;
    }
@@ -211,6 +228,16 @@ import Plano from "./Plano.astro";
 </style>
 
 <script>
+const tabs = document.querySelectorAll('.tab');
 
+tabs.forEach(tab => {
+   tab.addEventListener('click', () => {
+      const activeTabs = document.querySelectorAll('.active');
+      activeTabs.forEach(tab => {
+         tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+   });
+});
 
 </script>
